@@ -3,21 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Diwali</title>
+
+    <title>Happy Diwali ✨</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="name-box">
-        <h1>🪔 Happy Diwali 🪔</h1>
-        <p>Enter your name to celebrate</p>
+    <!-- Floating decorations -->
+    <div class="spark s1">✦</div>
+    <div class="spark s2">✧</div>
+    <div class="spark s3">✦</div>
+    <div class="spark s4">✧</div>
 
-        <input type="text" id="name" placeholder="Enter your name">
+    <!-- Main welcome section -->
+    <main class="welcome">
 
-        <button onclick="startDiwali()">Enter ✨</button>
-    </div>
+        <div class="top-diya">🪔</div>
+
+        <div class="card">
+
+            <div class="small-text">
+                ✨ A Celebration of Light ✨
+            </div>
+
+            <h1>
+                Happy <span>Diwali</span>
+            </h1>
+
+            <p class="subtitle">
+                Light up your world with happiness,
+                love and beautiful moments.
+            </p>
+
+            <div class="name-area">
+
+                <label for="name">
+                    🎇 Enter Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your beautiful name..."
+                    autocomplete="off"
+                >
+
+                <button onclick="startDiwali()">
+                    Celebrate Diwali ✨
+                </button>
+
+            </div>
+
+            <div class="bottom-text">
+                🪔 शुभ दीपावली 🪔
+            </div>
+
+        </div>
+
+        <div class="bottom-diyas">
+            🪔　🪔　🪔
+        </div>
+
+    </main>
 
     <script src="script.js"></script>
+
 </body>
 </html>
