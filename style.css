@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at top, #3b145f 0%, #16052d 45%, #05010d 100%);
+    overflow: hidden;
+}
+
+/* Background stars */
+body::before {
+    content: "✦   ✧      ✦       ✧    ✦";
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    right: 5%;
+    color: #ffd76a;
+    font-size: 25px;
+    letter-spacing: 35px;
+    opacity: 0.6;
+    animation: stars 3s infinite alternate;
+}
+
+/* Main box */
+.name-box {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 430px;
+    padding: 45px 30px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 215, 100, 0.5);
+    border-radius: 25px;
+
+    backdrop-filter: blur(12px);
+    box-shadow:
+        0 0 25px rgba(255, 174, 0, 0.25),
+        0 0 60px rgba(255, 87, 34, 0.15);
+}
+
+.name-box h1 {
+    color: #ffd65a;
+    font-size: 36px;
+    margin-bottom: 15px;
+    text-shadow:
+        0 0 10px #ff9800,
+        0 0 25px #ff6f00;
+}
+
+.name-box p {
+    color: #fff;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ffc107;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+}
+
+input:focus {
+    box-shadow: 0 0 15px #ffc107;
+}
+
+button {
+    margin-top: 20px;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(45deg, #ff9800, #ffca28);
+    color: #4a1c00;
+
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.7);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow:
+        0 0 20px #ffc107,
+        0 0 40px #ff9800;
+}
+
+@keyframes stars {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+
+@media (max-width: 500px) {
+    .name-box {
+        padding: 35px 22px;
+    }
+
+    .name-box h1 {
+        font-size: 29px;
+    }
+}
